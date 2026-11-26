@@ -75,6 +75,7 @@
     "contact.title": "Let’s talk",
     "contact.lead": "If you have a job, an internship or a project, write to me and I’ll get back to you quickly.",
     "contact.github": "See my GitHub",
+    "contact.linkedin": "See my LinkedIn",
     "contact.cv": "Download CV",
 
     // ---- pie ----

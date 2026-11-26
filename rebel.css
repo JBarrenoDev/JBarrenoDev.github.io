@@ -423,3 +423,7 @@ body.rb-open { overflow: hidden; }
 @media (max-width: 760px) {
   .rb__lang { left: auto; right: 4vw; bottom: 3vh; }
 }
+
+/* segundo botón de contacto (LinkedIn) con los colores invertidos */
+.rb-play--alt { background: var(--card); color: var(--card-ink); }
+.rb-play--alt:hover, .rb-play--alt:focus-visible { background: var(--accent); color: var(--accent-ink); }

@@ -75,6 +75,7 @@
       games: $$(".game").map((g) => ({ name: txt(".game__name", g), desc: txt(".game__body p", g), tags: $(".game__tags", g)?.innerHTML || "", href: $(".btn--red", g)?.getAttribute("href") || "#", media: $(".game__media video, .game__media img", g)?.outerHTML || "" })),
       mail: $(".contact__mail")?.textContent.trim(),
       github: "https://github.com/JBarrenoDev",
+      linkedin: $("[data-linkedin]")?.href || "",
       cv: window.i18n ? window.i18n.cv() : "assets/cv/CV_Julian_Barreno_Lopez_ES.pdf",
     };
   }
@@ -107,7 +108,8 @@
       case "contact":
         return `<p class="rb-x">${esc(T("contact.lead"))}</p>
           <p class="rb-x"><a class="rb-mail" href="mailto:${esc(c.mail)}">${esc(c.mail)}</a></p>
-          <p class="rb-x"><a class="rb-play" href="${c.github}" target="_blank" rel="noopener">${esc(T("contact.github"))}</a></p>`;
+          <p class="rb-x"><a class="rb-play" href="${c.github}" target="_blank" rel="noopener">${esc(T("contact.github"))}</a></p>
+          ${c.linkedin ? `<p class="rb-x"><a class="rb-play rb-play--alt" href="${esc(c.linkedin)}" target="_blank" rel="noopener">${esc(T("contact.linkedin"))}</a></p>` : ""}`;
     }
     return "";
   }
